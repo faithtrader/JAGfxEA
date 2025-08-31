@@ -8,7 +8,7 @@ export default function Home() {
       <main className="flex-1">
         <div className="max-w-4xl mx-auto px-4 py-20 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Hybrid-v3.3 Expert Advisor
+            JAGfx DCA EA
           </h1>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             Advanced multi-strategy Expert Advisor for MetaTrader 5. Combines multiple technical indicators with intelligent risk management for consistent trading performance.

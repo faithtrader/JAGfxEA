@@ -5,9 +5,9 @@ import { StripeProvider } from './components/StripeProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'JagFX - QQE QMP Fibonacci Strategy EA',
-  description: 'Professional Expert Advisor for MetaTrader 5 with advanced QQE and Fibonacci strategies',
-  keywords: 'forex, EA, expert advisor, MT5, trading, QQE, fibonacci',
+  title: 'JAGfx DCA',
+  description: 'Advanced multi-strategy Expert Advisor for MetaTrader 5 with intelligent risk management',
+  keywords: 'forex, EA, expert advisor, MT5, trading, DCA, multi-strategy',
 }
 
 export default function RootLayout({
@@ -25,6 +25,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-

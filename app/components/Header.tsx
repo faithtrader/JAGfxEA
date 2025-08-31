@@ -5,8 +5,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '#home' },
-  { name: 'Features', href: '#features' },
-  { name: 'Pricing', href: '#pricing' },
   { name: 'Support', href: '#support' },
 ]
 
@@ -28,34 +26,37 @@ export function Header() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors"
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="#pricing"
-            className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors"
-          >
-            Get Started
-          </a>
-        </div>
+                 <div className="hidden lg:flex lg:gap-x-12">
+           {navigation.map((item) => (
+             <a
+               key={item.name}
+               href={item.href}
+               className="text-base font-semibold leading-6 text-white hover:text-blue-400 transition-colors"
+             >
+               {item.name}
+             </a>
+           ))}
+         </div>
+         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+           <button
+             onClick={() => {
+               // This will be handled by the main page
+               window.location.hash = '#home'
+             }}
+             className="text-base font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors"
+           >
+             Buy Now
+           </button>
+         </div>
       </nav>
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-xs sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="text-2xl font-bold text-white">JagFX</span>
@@ -66,7 +67,7 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                <XMarkIcon className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
             <div className="mt-6 flow-root">
